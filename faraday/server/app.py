@@ -410,7 +410,7 @@ def create_app(db_connection_string=None, testing=None, register_extensions_flag
     @app.errorhandler(404)
     @app.route('/', defaults={'text': ''})
     @app.route('/<path:text>')
-    def index(ex):
+    def index(ex=None, text=None):
         """
         Handles 404 errors of paths.
         :param ex: Exception to return.
