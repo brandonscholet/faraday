@@ -414,6 +414,7 @@ def create_app(db_connection_string=None, testing=None, register_extensions_flag
         """
         Handles 404 errors of paths.
         :param ex: Exception to return.
+        :param text: Path captured by the route rules.
         :return: The exception if the path starts with the prefixes, or the default static file.
         """
         prefixes = ('/_api', '/v3', '/socket.io')
